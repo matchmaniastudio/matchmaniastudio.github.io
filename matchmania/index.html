@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Matchmania</title>
+<meta name="description" content="Privacy policy for the Matchmania mobile game (Android and iOS).">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #5b5b60;
+    --rule: #e2e2e6;
+    --accent: #0b57d0;
+    --panel: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121214;
+      --fg: #e8e8ea;
+      --muted: #a1a1a8;
+      --rule: #2c2c31;
+      --accent: #8ab4f8;
+      --panel: #1c1c20;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 2rem 1.15rem 4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.28rem; margin: 2.6rem 0 .7rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); }
+  h3 { font-size: 1.08rem; margin: 1.9rem 0 .5rem; }
+  h4 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
+  p, li { margin: .7rem 0; }
+  ul { padding-left: 1.3rem; }
+  a { color: var(--accent); }
+  code {
+    background: var(--panel);
+    padding: .1em .38em;
+    border-radius: 4px;
+    font-size: .89em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .updated { color: var(--muted); font-size: .95rem; margin: 0 0 1.6rem; }
+  .lede { font-size: 1.02rem; }
+  .contact-card {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: .9rem 1.1rem;
+    margin: 1.6rem 0 0;
+  }
+  .contact-card p { margin: .25rem 0; }
+  /* Wide content scrolls inside itself; the page body never scrolls sideways. */
+  .table-wrap { overflow-x: auto; margin: 1rem 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 22rem; font-size: .95rem; }
+  th, td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; }
+  footer { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .93rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Privacy Policy — Matchmania</h1>
+  <p class="updated">Last updated: 10 August 2026</p>
+
+  <p class="lede">Matchmania (“the app”) is developed and published by <strong>Matchmania
+  Studio</strong> (“we”, “us”), an independent developer based in Ukraine. This policy explains
+  what the app collects, why, and what you can do about it.</p>
+
+  <p>It applies to the Android and iOS versions of Matchmania, package identifier
+  <code>com.matchmania.game</code>.</p>
+
+  <div class="contact-card">
+    <p>Contact: <a href="mailto:matchmania.studio@gmail.com">matchmania.studio@gmail.com</a></p>
+  </div>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>The app has <strong>no accounts and no login</strong>. We never ask for your name, email
+      address, phone number, contacts, photos, or precise location.</li>
+    <li>The game does generate <strong>one random ID for your installation</strong>, so that lost
+      progress can be restored. It identifies a copy of the game, not a person, and no other app
+      can read it.</li>
+    <li><strong>Analytics is optional.</strong> You are asked once, on first launch, before
+      anything is sent. If you decline, no analytics data leaves your device.</li>
+    <li><strong>Crash reporting runs whether or not you accept analytics.</strong> It exists to
+      fix the app, not to measure you. This is explained again below, because it is the one thing
+      that is not covered by your answer.</li>
+    <li>Your game progress is stored <strong>on your device only</strong>.</li>
+    <li>We do not sell your data, and we do not share it with anyone other than the service
+      providers listed below.</li>
+  </ul>
+
+  <h2>What the app collects</h2>
+
+  <h3>1. Analytics — only if you accept</h3>
+
+  <p>On first launch the app asks whether you consent to analytics. Nothing is collected until you
+  answer, and the answer is remembered. If you decline, this entire section does not apply to
+  you.</p>
+
+  <p>If you accept, we use <strong>Google Firebase Analytics</strong> to understand how the game is
+  played. It collects:</p>
+  <ul>
+    <li>an app-instance identifier — a random ID generated for your installation, which identifies
+      that installation only and is not shared with other apps on your device;</li>
+    <li>your device model, operating system version, language, and approximate country;</li>
+    <li>in-game events: levels started and completed, progression, in-game currency earned and
+      spent, and screens viewed;</li>
+    <li>the app version and build number of your installation.</li>
+  </ul>
+
+  <p>We use this only in aggregate, to see which levels are too hard, where players stop playing,
+  and whether the game’s economy is balanced. We do not use it to build advertising profiles, and
+  the app currently shows no advertisements.</p>
+
+  <p>The app does <strong>not</strong> collect your device’s Advertising ID. Analytics is
+  configured with ad identifier collection switched off, and the app does not request the
+  <code>AD_ID</code> permission, so nothing here can be linked to your activity in other apps.</p>
+
+  <h3>2. Crash reporting — always active</h3>
+
+  <p>We use <strong>Google Firebase Crashlytics</strong> to detect and diagnose crashes.
+  <strong>This runs regardless of your analytics choice</strong>, because it is what allows a
+  broken build to be repaired rather than a way of measuring you. It collects, only when the app
+  crashes or hits an error:</p>
+  <ul>
+    <li>the stack trace and the sequence of actions leading to the crash;</li>
+    <li>the app version, build number, source commit, and release channel;</li>
+    <li>your device model, operating system version, and device state at the moment of failure
+      (available memory and storage, orientation);</li>
+    <li>a Crashlytics installation identifier, which is separate from the analytics identifier and
+      is not used for measurement;</li>
+    <li><strong>your installation ID</strong> — see below.</li>
+  </ul>
+
+  <p>Crash reports are not linked to your gameplay history and carry no advertising identifier.</p>
+
+  <h4>Your installation ID</h4>
+
+  <p>When you first open the game it generates a random ID for your installation. We use it for one
+  thing: if you contact us because your progress was lost, it is the only way to find it. The game
+  has no accounts, so there is nothing else that could identify your save.</p>
+
+  <p>Two things about it worth stating plainly:</p>
+  <ul>
+    <li>It is <strong>not</strong> derived from your device, your phone number, or any account. It
+      is a random value, and it is unique to Matchmania — no other app can see it or produce the
+      same value.</li>
+    <li>It is designed to <strong>survive reinstalling the game</strong>, so that progress can be
+      restored. On iPhone and iPad it is kept in the system keychain, which is not erased when an
+      app is deleted; on Android it is included in Google’s app backup if you have backup enabled.
+      Erasing your device removes it.</li>
+  </ul>
+
+  <p>This ID is attached to crash reports, which means it is sent whether or not you accepted
+  analytics. If you would rather not have it at all: on iOS, deleting the app and erasing your
+  device removes it; on Android, turning off Google backup and reinstalling generates a new one.
+  Doing so also means we can no longer restore lost progress for you.</p>
+
+  <h3>3. App configuration — always active</h3>
+
+  <p>The app uses <strong>Google Firebase Remote Config</strong> to read its own settings on launch
+  — which features are enabled, and balance values. This request is made before you answer the
+  consent question and is not covered by it, because the app needs its own configuration in order
+  to run at all.</p>
+
+  <p>This request carries a <strong>Firebase Installations ID</strong>. It is not used for
+  analytics or advertising. If this request fails or is blocked, the app falls back to the settings
+  shipped inside it and continues to work normally.</p>
+
+  <h3>4. Purchases</h3>
+
+  <p>If in-app purchases are available in your version of the app, payment is handled entirely by
+  <strong>Google Play</strong> or the <strong>Apple App Store</strong>. We never see or receive
+  your card details, billing address, or payment credentials. We receive only the store’s
+  confirmation that a purchase completed, so that we can deliver the item.</p>
+
+  <h3>5. Data stored on your device</h3>
+
+  <p>Your progress, settings, and in-game currency balances are saved in a file on your device.
+  This file is not uploaded anywhere. Deleting the app deletes it.</p>
+
+  <h2>What we do not collect</h2>
+  <ul>
+    <li>Your name, email address, phone number, or postal address.</li>
+    <li>Your contacts, photos, files, microphone, or camera.</li>
+    <li>Your precise location. Approximate country is derived from your IP address by Google and is
+      available to us only at country level.</li>
+    <li>Your device’s Advertising ID (Android) or IDFA (iOS), or any other identifier shared across
+      apps. The app does not ask for App Tracking Transparency permission on iOS, because it does
+      not track you across apps or websites.</li>
+    <li>Health, financial, or biometric data.</li>
+  </ul>
+
+  <p>The app contains no advertising SDKs and no social login.</p>
+
+  <h2>Who receives the data</h2>
+
+  <p><strong>Google LLC</strong>, as our service provider, operates Firebase Analytics, Crashlytics
+  and Remote Config on our behalf. Their handling of this data is governed by the
+  <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security policy</a>
+  and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+  <p><strong>Google Play</strong> and <strong>Apple</strong> process purchases under their own
+  privacy policies.</p>
+
+  <p>We do not sell personal data, and we do not share it with advertisers, data brokers, or any
+  other third party.</p>
+
+  <p>Data is processed on Google’s infrastructure, which may be located outside your country,
+  including in the United States. Google’s transfer safeguards are described in the policies linked
+  above.</p>
+
+  <h2>Legal basis (EEA and UK users)</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Purpose</th><th>Basis</th></tr></thead>
+      <tbody>
+        <tr><td>Analytics</td><td>Your <strong>consent</strong>, given in the app and withdrawable at any time</td></tr>
+        <tr><td>Crash reporting</td><td>Our <strong>legitimate interest</strong> in keeping the app working and secure</td></tr>
+        <tr><td>App configuration (Remote Config)</td><td>Necessary to <strong>deliver the service</strong> you requested</td></tr>
+        <tr><td>Purchases</td><td>Necessary to <strong>perform the contract</strong> for the item you bought</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>How long it is kept</h2>
+  <ul>
+    <li>Analytics data: up to 14 months.</li>
+    <li>Crash reports: 90 days.</li>
+    <li>Data stored on your device: until you delete it or uninstall the app.</li>
+  </ul>
+
+  <h2>Your choices and rights</h2>
+
+  <p><strong>Change your analytics answer at any time.</strong> Open <strong>Settings</strong> in
+  the game and use the <strong>Analytics</strong> toggle. Turning it off stops collection
+  immediately. It is exactly as easy to turn off as it was to turn on, and no part of the game is
+  withheld if you decline.</p>
+
+  <p><strong>Delete your local data</strong> by uninstalling the app.</p>
+
+  <p>If you are in the EEA, the UK, or another region with equivalent law, you also have the right
+  to request access to your data, its correction or erasure, to object to processing, and to lodge
+  a complaint with your data protection authority. To exercise any of these, email
+  <a href="mailto:matchmania.studio@gmail.com">matchmania.studio@gmail.com</a>. Because the app has
+  no accounts, we may need your installation ID in order to find any data at all; we will explain
+  how to read it off your screen if you ask.</p>
+
+  <h2>Children</h2>
+
+  <p>Matchmania is not directed to children under 13, and we do not knowingly collect personal data
+  from them. If you believe a child has provided us with data, contact us and we will delete it.</p>
+
+  <h2>Changes to this policy</h2>
+
+  <p>If we change what the app collects — for example if advertising is added — this page will be
+  updated and the date at the top changed before the new version of the app is released. Material
+  changes to how analytics works will be re-asked in the app rather than only posted here.</p>
+
+  <footer>
+    <p>Matchmania Studio<br>
+    <a href="mailto:matchmania.studio@gmail.com">matchmania.studio@gmail.com</a></p>
+  </footer>
+
+</main>
+</body>
+</html>

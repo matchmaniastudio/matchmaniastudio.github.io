@@ -184,7 +184,9 @@ const MESSAGES = {
   INVALID_EMAIL: "That email address doesn't look right.",
   MISSING_PASSWORD: "Enter your password.",
   USER_DISABLED: "This account is disabled. Email us to have it deleted.",
-  TOO_MANY_ATTEMPTS_TRY_LATER: "Too many attempts. Please try again later.",
+  // Firebase blocks the account after 5 wrong passwords in a row, the right one included, for a
+  // few minutes; the reset mail still works, so say so.
+  TOO_MANY_ATTEMPTS_TRY_LATER: "Too many attempts. Wait a few minutes and try again, or reset your password.",
   NETWORK: "Could not connect. Check your connection and try again.",
 };
 

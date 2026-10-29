@@ -94,6 +94,10 @@
     <li><strong>Crash reporting runs whether or not you accept analytics.</strong> It exists to
       fix the app, not to measure you. This is explained again below, because it is the one thing
       that is not covered by your answer.</li>
+    <li>The free version of the game <strong>shows ads</strong>, through <strong>Google AdMob</strong>.
+      Most are ads you choose to watch for a reward; one may appear after you win a level. Ads use
+      your device’s advertising identifier — see <em>Advertising</em> below. If you buy the no-ads
+      option, the ad service is not started at all.</li>
     <li>Your game progress is stored <strong>on your device only</strong>.</li>
     <li>We do not sell your data, and we do not share it with anyone other than the service
       providers listed below.</li>
@@ -114,7 +118,8 @@
       that installation only and is not shared with other apps on your device;</li>
     <li>your device model, operating system version, language, and approximate country;</li>
     <li>in-game events: levels started and completed, progression, in-game currency earned and
-      spent, and screens viewed;</li>
+      spent, screens viewed, and the ads you watched together with the revenue each one earned
+      us;</li>
     <li>the app version and build number of your installation;</li>
     <li><strong>your installation ID</strong> (described under <em>Crash reporting</em> below), so
       that the events from one installation can be followed over time and matched with a crash
@@ -124,12 +129,13 @@
 
   <p>We use this mostly in aggregate, to see which levels are too hard, where players stop playing,
   and whether the game’s economy is balanced. We look at a single installation’s events only to
-  investigate a problem, or when you ask us to. We do not use it to build advertising profiles, and
-  the app currently shows no advertisements.</p>
+  investigate a problem, or when you ask us to. We do not use analytics to build advertising
+  profiles.</p>
 
-  <p>The app does <strong>not</strong> collect your device’s Advertising ID. Analytics is
-  configured with ad identifier collection switched off, and the app does not request the
-  <code>AD_ID</code> permission, so nothing here can be linked to your activity in other apps.</p>
+  <p>Analytics does <strong>not</strong> read your device’s advertising identifier: it is
+  configured with ad identifier collection switched off, so nothing in this section can be linked
+  to your activity in other apps. The advertising identifier is read only by the ad service
+  described in section 4.</p>
 
   <h3>2. Crash reporting — always active</h3>
 
@@ -186,14 +192,57 @@
   analytics or advertising. If this request fails or is blocked, the app falls back to the settings
   shipped inside it and continues to work normally.</p>
 
-  <h3>4. Purchases</h3>
+  <h3>4. Advertising — Google AdMob</h3>
+
+  <p>The game is free to play and is funded partly by ads, served by <strong>Google AdMob</strong>.
+  There are two kinds:</p>
+  <ul>
+    <li><strong>Rewarded ads</strong> — shown only when you tap a button offering a reward (extra
+      moves, doubled rewards, a cheaper level entry, a bonus). Nothing is shown if you don’t tap.</li>
+    <li><strong>An occasional full-screen ad</strong> after you win a level, between the reward
+      screen and the level list. It is never shown during your first few sessions, never after a lost
+      level, and not after a level in which you already watched a rewarded ad.</li>
+  </ul>
+
+  <p>To choose, show and measure ads, and to prevent ad fraud, Google’s ad software in the app
+  collects:</p>
+  <ul>
+    <li>your device’s <strong>advertising identifier</strong> — the Android Advertising ID, or on
+      iPhone and iPad the IDFA, but only if you allow tracking (see below) — and app-set
+      identifiers;</li>
+    <li>your IP address, from which an approximate location is estimated;</li>
+    <li>how you interact with ads (for example whether one was shown, watched or tapped);</li>
+    <li>device and performance information about the ad software.</li>
+  </ul>
+
+  <p><strong>Your consent.</strong> Where the law requires it — including the EEA, the UK and
+  Switzerland — the app shows Google’s consent form before any ad is requested. You can choose
+  personalised ads, non-personalised ads, or object, and change your answer at any time under
+  <strong>Settings → Ad Privacy Choices</strong> in the game. Without your consent to
+  personalisation you will still see ads, but they are not based on your activity in other apps.
+  This is separate from the analytics question in section 1: answering one does not answer the
+  other.</p>
+
+  <p><strong>On iPhone and iPad</strong> the app asks, through Apple’s App Tracking Transparency
+  prompt, whether it may use the IDFA. If you choose “Ask App Not to Track”, the IDFA is not used
+  and ads still work.</p>
+
+  <p><strong>The no-ads option.</strong> If you buy it, the ad software is not started: no ads, no
+  consent form, no tracking prompt, and none of the data above is collected.</p>
+
+  <p>Google uses this data under its own policies, and for personalised advertising acts as an
+  independent controller of it. See
+  <a href="https://policies.google.com/technologies/partner-sites">how Google uses information
+  from apps that use its services</a>.</p>
+
+  <h3>5. Purchases</h3>
 
   <p>If in-app purchases are available in your version of the app, payment is handled entirely by
   <strong>Google Play</strong> or the <strong>Apple App Store</strong>. We never see or receive
   your card details, billing address, or payment credentials. We receive only the store’s
   confirmation that a purchase completed, so that we can deliver the item.</p>
 
-  <h3>5. Data stored on your device</h3>
+  <h3>6. Data stored on your device</h3>
 
   <p>Your progress, settings, and in-game currency balances are saved in a file on your device.
   This file is not uploaded anywhere. Deleting the app deletes it.</p>
@@ -204,26 +253,28 @@
     <li>Your contacts, photos, files, microphone, or camera.</li>
     <li>Your precise location. Approximate country is derived from your IP address by Google and is
       available to us only at country level.</li>
-    <li>Your device’s Advertising ID (Android) or IDFA (iOS), or any other identifier shared across
-      apps. The app does not ask for App Tracking Transparency permission on iOS, because it does
-      not track you across apps or websites.</li>
+    <li>Any identifier shared across apps, for our own use. The advertising identifier is read only
+      by Google’s ad software, for ads (section 4); we do not receive it, and analytics does not
+      collect it.</li>
     <li>Health, financial, or biometric data.</li>
   </ul>
 
-  <p>The app contains no advertising SDKs and no social login.</p>
+  <p>The app has no social login.</p>
 
   <h2>Who receives the data</h2>
 
   <p><strong>Google LLC</strong>, as our service provider, operates Firebase Analytics, Crashlytics
-  and Remote Config on our behalf. Their handling of this data is governed by the
+  and Remote Config on our behalf. Google also runs <strong>AdMob</strong>, our ad network, which
+  receives the advertising data described in section 4 and, for personalised ads, uses it as an
+  independent controller. Their handling of this data is governed by the
   <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security policy</a>
   and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
   <p><strong>Google Play</strong> and <strong>Apple</strong> process purchases under their own
   privacy policies.</p>
 
-  <p>We do not sell personal data, and we do not share it with advertisers, data brokers, or any
-  other third party.</p>
+  <p>We do not sell personal data. Apart from Google’s ad network as described above, we do not share
+  it with advertisers, data brokers, or any other third party.</p>
 
   <p>Data is processed on Google’s infrastructure, which may be located outside your country,
   including in the United States. Google’s transfer safeguards are described in the policies linked
@@ -236,6 +287,8 @@
       <tbody>
         <tr><td>Analytics</td><td>Your <strong>consent</strong>, given in the app and withdrawable at any time</td></tr>
         <tr><td>Crash reporting</td><td>Our <strong>legitimate interest</strong> in keeping the app working and secure</td></tr>
+        <tr><td>Personalised ads</td><td>Your <strong>consent</strong>, collected by Google’s consent form and changeable under Settings → Ad Privacy Choices</td></tr>
+        <tr><td>Non-personalised ads</td><td>Our <strong>legitimate interest</strong> in funding a free game, within the choices you made in the consent form</td></tr>
         <tr><td>App configuration (Remote Config)</td><td>Necessary to <strong>deliver the service</strong> you requested</td></tr>
         <tr><td>Purchases</td><td>Necessary to <strong>perform the contract</strong> for the item you bought</td></tr>
       </tbody>
@@ -251,6 +304,7 @@
       beyond the periods above. This copy is kept for as long as it is useful for fixing problems and
       improving the game, and is deleted on request — see <em>Your choices and rights</em>. Analytics
       events reach it only if you accepted analytics.</li>
+    <li>Advertising data collected by AdMob: kept by Google under its own retention policies.</li>
     <li>Data stored on your device: until you delete it or uninstall the app.</li>
   </ul>
 
@@ -260,6 +314,12 @@
   the game and use the <strong>Analytics</strong> toggle. Turning it off stops collection
   immediately. It is exactly as easy to turn off as it was to turn on, and no part of the game is
   withheld if you decline.</p>
+
+  <p><strong>Ads.</strong> Change your ad consent under <strong>Settings → Ad Privacy Choices</strong>
+  (shown where the consent form applies). On Android you can reset or delete your Advertising ID in
+  your device’s settings (<em>Privacy → Ads</em>); on iPhone and iPad you can turn off tracking
+  under <em>Settings → Privacy &amp; Security → Tracking</em>. The no-ads option removes ads and
+  their data collection entirely.</p>
 
   <p><strong>Delete your local data</strong> by uninstalling the app.</p>
 
@@ -277,8 +337,7 @@
 
   <h2>Changes to this policy</h2>
 
-  <p>If we change what the app collects — for example if advertising is added — this page will be
-  updated and the date at the top changed before the new version of the app is released. Material
+  <p>If we change what the app collects, this page will be updated and the date at the top changed before the new version of the app is released. Material
   changes to how analytics works will be re-asked in the app rather than only posted here.</p>
 
   <footer>

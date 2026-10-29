@@ -69,7 +69,7 @@
 <main>
 
   <h1>Privacy Policy — Matchmania</h1>
-  <p class="updated">Last updated: 10 August 2026</p>
+  <p class="updated">Last updated: 29 October 2026</p>
 
   <p class="lede">Matchmania (“the app”) is developed and published by <strong>Matchmania
   Studio</strong> (“we”, “us”), an independent developer based in Ukraine. This policy explains
@@ -115,11 +115,16 @@
     <li>your device model, operating system version, language, and approximate country;</li>
     <li>in-game events: levels started and completed, progression, in-game currency earned and
       spent, and screens viewed;</li>
-    <li>the app version and build number of your installation.</li>
+    <li>the app version and build number of your installation;</li>
+    <li><strong>your installation ID</strong> (described under <em>Crash reporting</em> below), so
+      that the events from one installation can be followed over time and matched with a crash
+      report when we investigate a problem. It is attached only while analytics is accepted, and
+      stops being attached as soon as you turn analytics off.</li>
   </ul>
 
-  <p>We use this only in aggregate, to see which levels are too hard, where players stop playing,
-  and whether the game’s economy is balanced. We do not use it to build advertising profiles, and
+  <p>We use this mostly in aggregate, to see which levels are too hard, where players stop playing,
+  and whether the game’s economy is balanced. We look at a single installation’s events only to
+  investigate a problem, or when you ask us to. We do not use it to build advertising profiles, and
   the app currently shows no advertisements.</p>
 
   <p>The app does <strong>not</strong> collect your device’s Advertising ID. Analytics is
@@ -142,13 +147,17 @@
     <li><strong>your installation ID</strong> — see below.</li>
   </ul>
 
-  <p>Crash reports are not linked to your gameplay history and carry no advertising identifier.</p>
+  <p>Crash reports carry no advertising identifier. If you declined analytics, they are not linked
+  to any gameplay history, because none is collected. If you accepted it, the installation ID on a
+  crash report is the same one on your analytics events, so we can see what happened in the game
+  just before a crash.</p>
 
   <h4>Your installation ID</h4>
 
-  <p>When you first open the game it generates a random ID for your installation. We use it for one
-  thing: if you contact us because your progress was lost, it is the only way to find it. The game
-  has no accounts, so there is nothing else that could identify your save.</p>
+  <p>When you first open the game it generates a random ID for your installation. Its main purpose:
+  if you contact us because your progress was lost, it is the only way to find it. The game has no
+  accounts, so there is nothing else that could identify your save. If you accepted analytics, it
+  is also attached to your analytics events (see section 1).</p>
 
   <p>Two things about it worth stating plainly:</p>
   <ul>
@@ -235,8 +244,13 @@
 
   <h2>How long it is kept</h2>
   <ul>
-    <li>Analytics data: up to 14 months.</li>
-    <li>Crash reports: 90 days.</li>
+    <li>Analytics data: up to 14 months in Firebase Analytics.</li>
+    <li>Crash reports: 90 days in Firebase Crashlytics.</li>
+    <li><strong>Our own copy.</strong> We export analytics events and crash reports to a database we
+      control on Google’s infrastructure (Google BigQuery), so that problems and trends can be studied
+      beyond the periods above. This copy is kept for as long as it is useful for fixing problems and
+      improving the game, and is deleted on request — see <em>Your choices and rights</em>. Analytics
+      events reach it only if you accepted analytics.</li>
     <li>Data stored on your device: until you delete it or uninstall the app.</li>
   </ul>
 

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete your account — Matchmania</title>
+<meta name="description" content="Delete your Matchmania account and its data, with or without the app.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #5b5b60;
+    --rule: #e2e2e6;
+    --accent: #0b57d0;
+    --panel: #f5f5f7;
+    --danger: #b3261e;
+    --ok: #146c2e;
+    --field: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121214;
+      --fg: #e8e8ea;
+      --muted: #a1a1a8;
+      --rule: #2c2c31;
+      --accent: #8ab4f8;
+      --panel: #1c1c20;
+      --danger: #f2b8b5;
+      --ok: #9ad7a6;
+      --field: #121214;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 2rem 1.15rem 4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.28rem; margin: 2.6rem 0 .7rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); }
+  p, li { margin: .7rem 0; }
+  ul, ol { padding-left: 1.3rem; }
+  a { color: var(--accent); }
+  .updated { color: var(--muted); font-size: .95rem; margin: 0 0 1.6rem; }
+  .lede { font-size: 1.02rem; }
+  .card {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 1.1rem 1.1rem 1.2rem;
+    margin: 1.2rem 0;
+  }
+  label { display: block; font-weight: 600; margin: .9rem 0 .3rem; }
+  input[type=email], input[type=password] {
+    width: 100%;
+    font: inherit;
+    padding: .6rem .75rem;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    background: var(--field);
+    color: var(--fg);
+  }
+  .check { display: flex; gap: .6rem; align-items: flex-start; font-weight: 400; margin-top: 1rem; }
+  .check input { margin-top: .35rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; align-items: center; margin-top: 1.2rem; }
+  button.danger {
+    font: inherit;
+    font-weight: 600;
+    padding: .65rem 1.2rem;
+    border: 0;
+    border-radius: 8px;
+    background: var(--danger);
+    color: var(--bg);
+    cursor: pointer;
+  }
+  button.danger:disabled { opacity: .5; cursor: default; }
+  button.link {
+    font: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--accent);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #status { margin: 1rem 0 0; min-height: 1.6em; }
+  #status.error { color: var(--danger); }
+  #status.ok { color: var(--ok); font-weight: 600; }
+  footer { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .93rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Delete your Matchmania account</h1>
+  <p class="updated">Matchmania Studio · last updated 30 October 2026</p>
+
+  <p class="lede">You can delete your <strong>Matchmania</strong> account and the data stored with
+  it at any time — in the game, or on this page without installing anything. Deletion is
+  immediate and cannot be undone.</p>
+
+  <h2>In the game</h2>
+  <ol>
+    <li>Open <strong>Settings</strong> and tap <strong>Account</strong>.</li>
+    <li>Tap <strong>Delete account</strong> and confirm.</li>
+    <li>Enter your password and tap <strong>Delete</strong>.</li>
+  </ol>
+
+  <h2>On this page</h2>
+  <p>For accounts created with an email address and password.</p>
+
+  <div class="card">
+    <form id="delete-form" novalidate>
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="username" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" required>
+
+      <label class="check">
+        <input id="confirm" type="checkbox">
+        <span>I understand that my account and the data stored with it will be deleted permanently.</span>
+      </label>
+
+      <div class="actions">
+        <button id="delete-btn" class="danger" type="submit" disabled>Delete my account</button>
+        <button id="forgot-btn" class="link" type="button">Forgot password?</button>
+      </div>
+    </form>
+    <p id="status" role="status" aria-live="polite"></p>
+  </div>
+
+  <p><strong>Forgot your password?</strong> Enter your email above and tap <em>Forgot password?</em> —
+  we will email you a link to set a new one, then come back here.</p>
+
+  <p><strong>Can't use the form?</strong> For example, if your account has no password, or you no
+  longer have access to it: email
+  <a href="mailto:matchmania.studio@gmail.com?subject=Delete%20my%20Matchmania%20account">matchmania.studio@gmail.com</a>
+  <strong>from the address your account uses</strong>, with the subject “Delete my Matchmania
+  account”. Writing from that address is how we confirm the account is yours. We delete it within
+  30 days and reply when it is done.</p>
+
+  <p><strong>Never created an account?</strong> Then there is nothing to delete here: everything the
+  game stores lives on your device and is removed when you uninstall it.</p>
+
+  <h2>What is deleted</h2>
+  <ul>
+    <li>Your account: its email address, password (which we never see — it is stored by our
+      sign-in provider, Google Firebase, only as a one-way hash) and account ID.</li>
+    <li>Any progress or other data stored online under your account.</li>
+  </ul>
+
+  <h2>What is kept</h2>
+  <ul>
+    <li><strong>Progress on your device</strong> stays until you uninstall the game — the game keeps
+      working without an account.</li>
+    <li><strong>Purchase records</strong> are held by Google Play or the App Store, not by us, under
+      their own policies.</li>
+    <li><strong>Analytics and crash reports</strong> are not linked to your account and expire on
+      their normal schedule: up to 14 months for analytics, 90 days for crash reports. Our own copy
+      of them is deleted on request — see the <a href="../">privacy policy</a>.</li>
+  </ul>
+
+  <footer>
+    <p>Matchmania Studio · <a href="../">Privacy policy</a><br>
+    <a href="mailto:matchmania.studio@gmail.com">matchmania.studio@gmail.com</a></p>
+  </footer>
+
+</main>
+<script>
+// Same Firebase Auth REST calls the game makes (AuthManager / FirebaseAuthRest): sign in to get a
+// fresh token, then delete with it. The key is the public one shipped inside the app — it
+// identifies the project, it does not grant anything on its own.
+const API_KEY = "AIzaSyAo4bUtrPFiMkrTQFIaXFI6bkGZP6ElIXs";
+const ENDPOINT = "https://identitytoolkit.googleapis.com/v1/accounts:";
+
+const MESSAGES = {
+  INVALID_LOGIN_CREDENTIALS: "Wrong email or password.",
+  INVALID_PASSWORD: "Wrong email or password.",
+  EMAIL_NOT_FOUND: "Wrong email or password.",
+  INVALID_EMAIL: "That email address doesn't look right.",
+  MISSING_PASSWORD: "Enter your password.",
+  USER_DISABLED: "This account is disabled. Email us to have it deleted.",
+  TOO_MANY_ATTEMPTS_TRY_LATER: "Too many attempts. Please try again later.",
+  NETWORK: "Could not connect. Check your connection and try again.",
+};
+
+async function call(method, body) {
+  let res;
+  try {
+    res = await fetch(ENDPOINT + method + "?key=" + API_KEY, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+  } catch (e) {
+    return { ok: false, error: "NETWORK" };
+  }
+  const data = await res.json().catch(() => ({}));
+  if (res.ok) return { ok: true, data };
+  if (res.status >= 500) return { ok: false, error: "NETWORK" };
+  const msg = (data.error && data.error.message) || "HTTP_" + res.status;
+  return { ok: false, error: msg.split(" ")[0] };
+}
+
+async function deleteAccount(email, password) {
+  const signIn = await call("signInWithPassword",
+    { email: email.trim(), password, returnSecureToken: true });
+  if (!signIn.ok) return signIn;
+  return call("delete", { idToken: signIn.data.idToken });
+}
+
+function sendReset(email) {
+  return call("sendOobCode", { requestType: "PASSWORD_RESET", email: email.trim() });
+}
+
+function wording(result) {
+  return MESSAGES[result.error] || "Something went wrong (" + result.error + "). Please try again.";
+}
+
+if (typeof document !== "undefined") {
+  const form = document.getElementById("delete-form");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const confirmBox = document.getElementById("confirm");
+  const button = document.getElementById("delete-btn");
+  const forgot = document.getElementById("forgot-btn");
+  const status = document.getElementById("status");
+
+  const show = (text, kind) => { status.textContent = text; status.className = kind || ""; };
+  const sync = () => { button.disabled = !confirmBox.checked; };
+  confirmBox.addEventListener("change", sync);
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!email.value.trim() || !password.value) {
+      show("Enter your email and password.", "error");
+      return;
+    }
+    button.disabled = true;
+    show("Deleting…");
+    const result = await deleteAccount(email.value, password.value);
+    if (result.ok) {
+      form.hidden = true;
+      show("Your account has been deleted.", "ok");
+    } else {
+      show(wording(result), "error");
+      sync();
+    }
+  });
+
+  forgot.addEventListener("click", async () => {
+    if (!email.value.trim()) {
+      show("Enter your email above first.", "error");
+      email.focus();
+      return;
+    }
+    show("Sending…");
+    const result = await sendReset(email.value);
+    // Worded the same whether or not the address has an account (Firebase answers OK either way).
+    if (result.ok) show("If " + email.value.trim() + " has an account, a reset link is on its way.", "ok");
+    else show(wording(result), "error");
+  });
+}
+
+if (typeof module !== "undefined") module.exports = { deleteAccount, sendReset, wording, call };
+</script>
+</body>
+</html>
